@@ -1,4 +1,4 @@
-const API_KEY = "PASTE YOUR API HERE !"
+const API_KEY = "PASTE YOUR API KEY HERE !"
 
 async function getWeatherByCity(event) {
     event.preventDefault()
