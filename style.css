@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Audiowide&family=Delicious+Handrawn&family=Indie+Flower&family=Orbitron:wght@400..900&family=Saira+Stencil+One&family=Shadows+Into+Light+Two&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Silkscreen:wght@400;700&family=Sriracha&family=Tangerine:wght@400;700&family=The+Girl+Next+Door&display=swap');
+:root {
+    --main-color: #48304D;
+    --fourth-color: #5ff077;
+
+    --font-one: "Shadows Into Light Two", serif;
+    --font-pixel: "Silkscreen", serif;
+}
+
+* {
+    transition: all 500ms ease-in-out; /* A VERIFIER */
+}
+
+body {
+    font-family: var(--font-one);
+    font-weight: 400;
+    background-color: var(--fourth-color);
+    color: var(--main-color);
+}
+
+/* --------------------------------------- */
+
+.welcome {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "title signature";
+    align-items: center;
+}
+
+.welcome h1 {
+    text-align: left;
+
+    margin: 2rem 1rem 1rem;
+    padding: 1rem;
+}
+
+.welcome h2 {
+    font-family: var(--font-pixel);
+    font-weight: 200;
+
+    text-align: right;
+
+    margin-right: 1em;
+}
+
+
+/* --------------------------------------- */
+
+form {
+    text-align: center;
+    border: 0.5em solid var(--main-color);
+    border-radius: 1em;
+
+    padding: 0.5em;
+
+    margin: 0em 25em 0em;
+}
+
+form label {
+    font-family: var(--font-pixel);
+}
+input {
+    background-color: var(--main-color);
+    color: var(--fourth-color);
+
+    font-family: var(--font-one);
+    font-size: 1em;
+
+    border: solid 0.1em var(--fourth-color);
+    border-radius: 0.5em;
+    padding: 0.4em;
+}
+
+input::placeholder {
+    color: var(--fourth-color);
+}
+
+form button {
+    background-color: var(--main-color);
+    color: var(--fourth-color);
+
+    font-family: var(--font-pixel);
+    font-weight: 200;
+
+    font-size: 1em;
+
+    border: solid 0.1em var(--fourth-color);
+    border-radius: 0.5em;
+    padding: 0.4em;
+}
+
+form button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* --------------------------------------- */
+
+.container, .card  {
+    box-shadow: 0px 0px 1em black;
+}
+
+/* --------------------------------------- */
+
+.container {
+    display: grid;
+    grid-template-rows: 20% 20% 60%;
+    grid-template-areas: 
+    "first"
+    "second"
+    "third"
+    ;
+    align-items: center;
+
+    border: var(--main-color) solid 2px;
+    border-radius: 1em;
+    margin: 1em;
+
+    background-color: var(--main-color);
+
+    margin: 1em;
+}
+
+.city {
+    font-family: var(--font-pixel);
+    font-weight: 200;
+    text-decoration: underline dashed 0.3rem;
+}
+
+/* --------------------------------------- */
+
+.main-infos {
+    grid-area: first;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "image title"
+    ;
+    align-items: center;
+
+    background-color: var(--fourth-color);
+    border-radius: 1em;
+    
+    /*margin: 1em;
+    margin-top: 2em;
+    margin-bottom: -1em;*/
+
+    margin-top: 3em;
+    margin-bottom: 0em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.main-infos img {
+    grid-area: image;
+    margin: auto;
+}
+
+.main-infos #text_weather h2, p {
+    grid-area: title;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.main-infos #text_weather h2 {
+    font-family: var(--font-pixel);
+    font-weight: 200;
+}
+
+/* --------------------------------------- */
+.main-2 {
+    grid-area: second;
+
+    display: grid;
+    grid-template-columns:50% 50%;
+    grid-template-areas: "title info"
+    ;
+    align-items: center;
+    text-align: center;
+
+    color: var(--fourth-color);
+    margin: auto;
+}
+
+.main-2 h3 {
+    grid-area: title;
+    text-align: center;
+}
+
+.main-2 h1 {
+    grid-area: info;
+
+    font-family: var(--font-pixel);
+    font-weight: 200;
+    font-size: 5em;
+} 
+
+/* --------------------------------------- */
+
+.card-grid {
+    grid-area: third;
+
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas: "humidity time wind"
+    ;
+    align-items: center;
+    margin-top: -1em;
+    margin-bottom: -2em;
+}
+
+.card {
+    background-color: var(--fourth-color);
+    color: var(--main-color);
+    height: 20em;
+    margin: 1em;
+    text-align: center;
+    border-radius: 8%;
+}
+
+.card-grid #humidity {
+    grid-area: humidity;
+    
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: "title"
+    "figure";
+}
+
+.card-grid #humidity h3 {
+    grid-area: title;
+    font-size: 2em;
+}
+
+.card-grid #humidity h2 {
+    grid-area: figure;
+
+    font-family: var(--font-pixel);
+    font-weight: 200;
+    font-size: 6em;
+}
+
+.card-grid #time {
+    grid-area: time;
+}
+
+.card-grid #time div h3 {
+    background-color: var(--main-color);
+    color: var(--fourth-color);
+    border-radius: 1em;
+    margin: 0em 0.5em;
+}
+
+
+.card-grid #wind {
+    grid-area: wind;
+}
+
+.card-grid #wind h3 {
+    font-size: 2em;
+}
+
+.card-grid #wind h4 {
+    font-size: 1.8em;
+}
+
+.card-grid #wind h4 span {
+    font-family: var(--font-pixel);
+    font-weight: 200;
+    font-size: 2em;
+}
